@@ -1,0 +1,25 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <fsck>
+# /dev/sdb2
+UUID=553de6fa-6595-47ea-ac40-54cd6e5abd68	/         	ext4      	rw,relatime	0 1
+
+# /dev/sdb1 LABEL=SYSTEM
+UUID=38CB-2DEE      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sdb3
+UUID=30f1f3b9-8a46-43ae-9be3-0982c1be55e0	/home     	ext4      	rw,relatime	0 2
+
+# /dev/sda1 [dati]
+UUID=2dde4840-e63e-4891-b8da-e15cd243fb6e	/dati		ext4		rw,relatime	0 0
+
+# /dev/sdb4 {ntfs} [dati_old]
+/dev/disk/by-label/DATA /mnt/01D5707D40B081F0 auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+
+# External backup disks
+/dev/disk/by-label/fraEl /mnt/fraEl auto noauto,nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/fraPass /mnt/fraPass auto noauto,nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+
+# swapfile
+/swapfile none swap defaults 0 0

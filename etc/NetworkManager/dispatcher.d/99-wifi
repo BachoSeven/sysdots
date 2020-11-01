@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+# If you are using Linux NetworkManager then this program toggles your
+# wifi connection off->ON whenever your wired connection goes ON->off,
+# and vice-versa. Simply copy this to
+# /etc/NetworkManager/dispatcher.d/99-wifi and ensure it is executable.
+# No configuration is required. Get the latest version from
+# https://gist.github.com/bulletmark/8e051a0a9ffdce689d86988c528e7764
+# Author: Mark Blakeney, Jun 2020.
+import sys 
+import subprocess
+
+def run(cmd):
+    'Run given cmd'
+    try:
+        res = subprocess.run(cmd.split(), stdout=subprocess.PIPE,
+                universal_newlines=True)
+    except Exception as e:
+        sys.exit(str(e))
+
+    if res.returncode != 0:
+        sys.exit(res.returncode)
+
+    return res.stdout
+
+# Firstly, ensure airplane mode is off because GNOME has an unfortunate
+# habit of automatically turning it on. 
+for line in run('rfkill -n').splitlines():
+    devid, devtype, pdev, sstate, hstate = line.split()
+    if devtype == 'wlan' and sstate == 'blocked':
+        run(f'rfkill unblock {devid}')
+
+eth_up = False
+wifi_up = None
+
+# Look at current state
+for line in run('nmcli -t -c no device').splitlines():
+    dev, devtype, state, *junk = line.split(':')
+    if devtype == 'ethernet':
+        if state == 'connected':
+            eth_up = True
+    elif devtype == 'wifi':
+        if state == 'connected':
+            wifi_up = True
+        elif wifi_up is None:
+            wifi_up = False
+
+# Set wifi off/on if ethernet device on/off.
+# Note we only switch wifi off/on if wifi device exists.
+if eth_up:
+    if wifi_up:
+        run('nmcli radio wifi off')
+else:
+    if wifi_up is False:
+        run('nmcli radio wifi on')

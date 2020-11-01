@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Saving to local list of explicitly installed packages
+When = PostTransaction
+Exec = /bin/sh -c '/usr/bin/pacman -Qqe > /home/fra/stuff/misc/arch_pkg_list.txt'
