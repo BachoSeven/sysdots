@@ -1,0 +1,9 @@
+						 █████╗ ██████╗  ██████╗██╗  ██╗    ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗     	\e{lightblue}TTY\e{reset}	\e{white}|\e{reset}	\e{cyan}\l\e{reset}
+						██╔══██╗██╔══██╗██╔════╝██║  ██║    ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝     	\e{lightblue}Host\e{reset}	\e{white}|\e{reset}	\e{cyan}\n\e{reset}
+						███████║██████╔╝██║     ███████║    ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝      	\e{lightblue}Arch\e{reset}	\e{white}|\e{reset}	\e{cyan}\m\e{reset}
+						██╔══██║██╔══██╗██║     ██╔══██║    ██║     ██║██║╚██╗██║██║   ██║ ██╔██╗      	\e{lightblue}Kernel\e{reset}	\e{white}|\e{reset}	\e{cyan}\r\e{reset}
+						██║  ██║██║  ██║╚██████╗██║  ██║    ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗     	\e{lightblue}Build\e{reset}	\e{white}|\e{reset}	\e{cyan}\v\e{reset}
+						╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
+						
+						\d \t
+
