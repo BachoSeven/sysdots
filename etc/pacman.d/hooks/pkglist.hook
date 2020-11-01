@@ -5,6 +5,6 @@ Type = Package
 Target = *
 
 [Action]
-Description = Saving to local list of explicitly installed packages
+Description = Updating local list of explicitly installed packages
 When = PostTransaction
-Exec = /bin/sh -c '/usr/bin/pacman -Qqe > /home/fra/stuff/misc/arch_pkg_list.txt'
+Exec = /bin/sh -c '/usr/bin/pacman -Qqe > /home/fra/.local/src/AARGH/arch_pkg_list'
