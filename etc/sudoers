@@ -99,4 +99,4 @@ root ALL=(ALL) ALL
 ## Read drop-in files from /etc/sudoers.d
 ## (the '#' here does not indicate a comment)
 #includedir /etc/sudoers.d
-%wheel ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys,/usr/bin/tee,/usr/bin/pacman,/usr/bin/NetworkManager,/usr/bin/systemctl,/usr/bin/shutdown,/usr/bin/reboot,/usr/bin/updatedb
+%wheel ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys,/usr/bin/tee,/usr/bin/pacman,/usr/bin/NetworkManager,/usr/bin/systemctl,/usr/bin/shutdown,/usr/bin/reboot,/usr/bin/updatedb,/usr/bin/pacnews
