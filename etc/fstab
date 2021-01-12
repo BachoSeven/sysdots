@@ -23,3 +23,6 @@ UUID=2dde4840-e63e-4891-b8da-e15cd243fb6e	/dati		ext4		rw,relatime	0 0
 
 # swapfile
 /swapfile none swap defaults 0 0
+
+# tmpfs
+tmpfs /tmp tmpfs rw,nodev,nosuid,size=16G 0 0
