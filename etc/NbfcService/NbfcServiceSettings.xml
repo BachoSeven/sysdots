@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ServiceSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SettingsVersion>0</SettingsVersion>
+  <SelectedConfigId>Asus Zenbook UX310UA</SelectedConfigId>
+  <Autostart>true</Autostart>
+  <ReadOnly>false</ReadOnly>
+  <TargetFanSpeeds>
+    <float>-1</float>
+  </TargetFanSpeeds>
+</ServiceSettings>
