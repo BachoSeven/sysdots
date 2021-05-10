@@ -29,7 +29,7 @@ Server = https://nl-mirror.chaotic.cx/$repo/$arch
 
 # Burgos, Spain
 # * By: JKANetwork
-# Server = https://es-mirror.chaotic.cx/$repo/$arch
+Server = https://es-mirror.chaotic.cx/$repo/$arch
 
 # Germany
 # * By: Nico
