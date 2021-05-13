@@ -96,7 +96,6 @@ load-module module-gsettings
 .fail
 .endif
 
-
 ### Automatically restore the default sink/source when changed by the user
 ### during runtime
 ### NOTE: This should be loaded as early as possible so that subsequent modules
