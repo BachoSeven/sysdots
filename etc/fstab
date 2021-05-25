@@ -15,11 +15,14 @@ UUID=30f1f3b9-8a46-43ae-9be3-0982c1be55e0	/home     	ext4      	rw,relatime	0 2
 UUID=2dde4840-e63e-4891-b8da-e15cd243fb6e	/dati		ext4		rw,relatime	0 0
 
 # /dev/sdb4 {ntfs} [dati_old]
-/dev/disk/by-label/DATA /mnt/01D5707D40B081F0 auto nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=133,dmask=022 0 0
+/dev/disk/by-label/DATA /mnt/01D5707D40B081F0 auto nofail,uid=1000,gid=1000,fmask=133,dmask=022 0 0
 
 # External backup disks
-/dev/disk/by-label/fraEl /mnt/fraEl auto noauto,nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=117,dmask=007 0 0
-/dev/disk/by-label/fraPass /mnt/fraPass auto noauto,nosuid,nodev,nofail,x-gvfs-show,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/fraEl /mnt/fraEl auto noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/fraPass /mnt/fraPass auto noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/roba /mnt/roba auto noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/homebkp /mnt/backup/home ext4 noauto,nofail,rw,relatime 0 0
+/dev/disk/by-label/rootbkp /mnt/backup/root ext4 noauto,nofail,rw,relatime 0 0
 
 # swapfile
 /swapfile none swap defaults 0 0
