@@ -6,7 +6,7 @@
 # No configuration is required. Get the latest version from
 # https://gist.github.com/bulletmark/8e051a0a9ffdce689d86988c528e7764
 # Author: Mark Blakeney, Jun 2020.
-import sys 
+import sys
 import subprocess
 
 def run(cmd):
@@ -23,7 +23,7 @@ def run(cmd):
     return res.stdout
 
 # Firstly, ensure airplane mode is off because GNOME has an unfortunate
-# habit of automatically turning it on. 
+# habit of automatically turning it on.
 for line in run('rfkill -n').splitlines():
     devid, devtype, pdev, sstate, hstate = line.split()
     if devtype == 'wlan' and sstate == 'blocked':
