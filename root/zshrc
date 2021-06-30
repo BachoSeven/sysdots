@@ -22,9 +22,6 @@ export EDITOR=nvim
 		zsh_load_plugins $plugins
 
 autoload promptinit; promptinit
-#PURE_PROMPT_SYMBOL='%f%F{red}#%f %F{magenta}❯'
-#prompt pure
-
 	local curdir="%~"
 	local hostname="%M"
 	local username="%n"
