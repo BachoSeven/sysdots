@@ -1,43 +1,42 @@
 setopt auto_cd
 export EDITOR=nvim
 
-	function zsh_load_plugins() {
-		local plugin
-		for plugin ($@); do
-			if [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh" ]; then
-				source "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh" 2>/dev/null
-			elif [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.plugin.zsh" ]; then
-				source "/home/fra/.config/zsh/plugins/$plugin/$plugin.plugin.zsh" 2>/dev/null
-			elif [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh-theme" ]; then
-				source "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh-theme" 2>/dev/null
-			else
-				echo "$funcstack[1]: Unable to load '$plugin'." >&2
-			fi
-		done
-	}
-		plugins=(
-			vi_mode
-			fast-syntax-highlighting
-			)
-		zsh_load_plugins $plugins
+function zsh_load_plugins() {
+	local plugin
+	for plugin ($@); do
+		if [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh" ]; then
+			source "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh" 2>/dev/null
+		elif [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.plugin.zsh" ]; then
+			source "/home/fra/.config/zsh/plugins/$plugin/$plugin.plugin.zsh" 2>/dev/null
+		elif [ -r "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh-theme" ]; then
+			source "/home/fra/.config/zsh/plugins/$plugin/$plugin.zsh-theme" 2>/dev/null
+		else
+			echo "$funcstack[1]: Unable to load '$plugin'." >&2
+		fi
+	done
+}
+	plugins=(
+		vi_mode
+		fast-syntax-highlighting
+		)
+	zsh_load_plugins $plugins
 
-autoload promptinit; promptinit
-	local curdir="%~"
-	local hostname="%M"
-	local username="%n"
-	local bold="%B"
-	local unbold="%b"
-	local standout="%S"
-	local unstandout="%s"
-	local underline="%U"
-	local ununderline="%u"
-	local colorfg="%F"
-	local uncolorfg="%f"
-	local colorbg="%K"
-	local uncolorbg="%k"
-	local mytime="%*"
-	local mydate="%D"
-	local line_tty="%y"
-	local rootorwhat="%(!.#.»)"
-	local return_status="%?"
-	PROMPT="$bold$colorfg{blue}$mytime$uncolorfg [$colorfg{red}$username@$colorfg{green}$hostname$uncolorfg:$unbold$curdir$bold] $colorfg{red}$rootorwhat $uncolorfg$unbold"
+local curdir="%~"
+local hostname="%M"
+local username="%n"
+local bold="%B"
+local unbold="%b"
+local standout="%S"
+local unstandout="%s"
+local underline="%U"
+local ununderline="%u"
+local colorfg="%F"
+local uncolorfg="%f"
+local colorbg="%K"
+local uncolorbg="%k"
+local mytime="%*"
+local mydate="%D"
+local line_tty="%y"
+local rootorwhat="%(!.#.»)"
+local return_status="%?"
+PROMPT="$bold$colorfg{blue}$mytime$uncolorfg [$colorfg{red}$username@$colorfg{green}$hostname$uncolorfg:$unbold$curdir$bold] $colorfg{red}$rootorwhat $uncolorfg$unbold"
