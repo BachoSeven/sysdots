@@ -15,7 +15,7 @@ UUID=30f1f3b9-8a46-43ae-9be3-0982c1be55e0	/home     	ext4      	rw,relatime	0 2
 /dev/disk/by-label/dati	/dati		ext4		rw,relatime	0 0
 
 # /dev/sdb4 {ntfs} [dati_old]
-/dev/disk/by-label/DATA /mnt/01D5707D40B081F0 ntfs3 noatime,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/DATA /mnt/01D5707D40B081F0 ntfs3 noatime,nofail,uid=1000,gid=1000,fmask=133,dmask=022 0 0
 
 # External backup disks
 /dev/disk/by-label/homebkp /mnt/backup/home ext4 noauto,nofail,rw,relatime 0 0
