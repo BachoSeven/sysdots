@@ -20,9 +20,9 @@ UUID=30f1f3b9-8a46-43ae-9be3-0982c1be55e0	/home     	ext4      	rw,relatime	0 2
 # External backup disks
 /dev/disk/by-label/homebkp /mnt/backup/home ext4 noauto,nofail,rw,relatime 0 0
 /dev/disk/by-label/rootbkp /mnt/backup/root ext4 noauto,nofail,rw,relatime 0 0
-/dev/disk/by-label/fraPass /mnt/fraPass auto noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/fraPass /mnt/fraPass ntfs3 noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
 ## broken hdd
-/dev/disk/by-label/fraEl /mnt/fraEl auto noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
+/dev/disk/by-label/fraEl /mnt/fraEl ntfs3 noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
 ## {ntfs}
 /dev/disk/by-label/roba /mnt/roba ntfs3 noatime,noauto,nofail,uid=1000,gid=1000,fmask=117,dmask=007 0 0
 
