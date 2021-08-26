@@ -1,5 +1,5 @@
 # Local 
-Server = http://192.168.1.107:8079
+# Server = http://192.168.1.107:8079
 
 # Italian
 Server = https://archmirror.it/repos/$repo/os/$arch
