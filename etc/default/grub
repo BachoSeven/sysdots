@@ -6,6 +6,8 @@
 #
 # GRUB boot loader configuration
 
+# Legacy, limine is much better
+
 GRUB_DEFAULT=saved
 GRUB_TIMEOUT=2
 GRUB_DISTRIBUTOR="Arch"
