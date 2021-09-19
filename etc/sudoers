@@ -28,4 +28,4 @@ root ALL=(ALL) ALL
 @includedir /etc/sudoers.d
 
 ## Allow members of group wheel to execute these commands without a password
-%wheel ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys,/usr/bin/tee,/usr/bin/pacman,/usr/bin/NetworkManager,/usr/bin/systemctl,/usr/bin/shutdown,/usr/bin/reboot,/usr/bin/updatedb,/usr/bin/pacnews
+%wheel ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys,/usr/bin/tee,/usr/bin/pacman,/usr/bin/NetworkManager,/usr/bin/systemctl,/usr/bin/shutdown,/usr/bin/reboot,/usr/bin/updatedb,/usr/bin/pacnews,/usr/bin/psd-overlay-helper
