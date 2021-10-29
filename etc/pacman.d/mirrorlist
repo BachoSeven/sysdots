@@ -1,9 +1,6 @@
 # Local 
 # Server = http://192.168.1.107:8079
 
-# Global
-Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch
-
 # Italian
 Server = https://archmirror.it/repos/$repo/os/$arch
 Server = https://archlinux.mirror.server24.net/$repo/os/$arch
