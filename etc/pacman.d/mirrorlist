@@ -3,4 +3,4 @@
 
 # Italian
 Server = https://archmirror.it/repos/$repo/os/$arch
-Server = https://archlinux.mirror.server24.net/$repo/os/$arch
+Server = http://archlinux.mirror.garr.it/archlinux/$repo/os/$arch
