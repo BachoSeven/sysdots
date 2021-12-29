@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux-zen
+
+[Action]
+Description = Updating Kernel version in Limine...
+When = PostTransaction
+Exec = /usr/local/bin/liminekernel
