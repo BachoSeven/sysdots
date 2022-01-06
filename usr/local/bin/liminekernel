@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sed -i -e "/_DATE}=/c\${KERN_DATE}=$(uname -v | cut -d' ' -f5-9 | tr '[:upper:]' '[:lower:]')" -e "/_VER}=/c\${KERN_VER}=$(uname -sr| tr '[:upper:]' '[:lower:]')" /boot/limine.cfg
+sed -i -e "/_DATE}=/c\${KERN_DATE}=$(pacman -Qi linux-zen | grep 'Build Date' | cut -d: -f2- | sed 's/^ //')" -e "/_VER}=/c\${KERN_VER}=$(pacman -Qi linux-zen | grep Version | cut -d: -f2- | sed 's/^ //')" /boot/limine.cfg
